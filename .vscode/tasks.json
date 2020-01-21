@@ -14,7 +14,7 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
-                "pointer/**"
+                "CPlusPlusGrammer/pointer/**"
                 
             ],
             "group": {
