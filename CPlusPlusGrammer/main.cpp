@@ -7,9 +7,12 @@
 int main()
 {
     printf("main is started!!\n");
-    MyPointerModule mpm;
-    mpm.PointerNulptr_tTest1(nullptr);
+    DoPointerModule();
     return 0;
 }
 
-
+void DoPointerModule()
+{
+    MyPointerModule mpm;
+    mpm.PointerNulptr_tTest1(nullptr);
+}
