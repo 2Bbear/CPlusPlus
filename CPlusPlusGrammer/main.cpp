@@ -14,6 +14,6 @@ int main()
 void DoPointerModule()
 {
     MyPointerModule mpm;
-    mpm.STDCOUTcharPointerErrorTest1();
+    mpm.DynamicArrayInitializeTest1();
 }
 

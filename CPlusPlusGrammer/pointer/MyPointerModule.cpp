@@ -70,4 +70,65 @@ void MyPointerModule::STDCOUTcharPointerErrorTest1()
 
 
 }
+/**
+ * pointer를 delete했으면 nullptr로 초기화 해서 쓰레기 값을 갖는 포인터를 없애야 한다.
+*/
+void MyPointerModule::WhatIsdanglingpointerTest1()
+{
+    int *ptr = new int; // dynamically allocate an integer 
+    int *otherPtr = ptr; // otherPtr is now pointed at that same memory location 
+    delete ptr; // return the memory to the operating system. ptr and otherPtr are now dangling pointers. 
+    ptr = nullptr; // ptr is now a nullptr
 
+}
+ void MyPointerModule::DynamicArrayInitializeTest1()
+ {
+     int * pIntArr = new int[3]{1,2,3};
+     char * pCharArr= new char[10]{'a','b','\n'};
+
+     cout<<pCharArr<<endl;
+     delete[] pIntArr;
+     delete[] pCharArr;
+ }
+
+ void MyPointerModule::HowToMakeDirectionConstValuePointerTest1()
+ {
+    const int cValue=10;
+    const int *pValue = &cValue;
+    int value =20;
+    pValue = & value;
+
+    //*pValue =40; 이건 안됨. const pointer 니까.
+
+ }
+
+ void MyPointerModule::WhatIsConstPointerTest1()
+ {
+     int value=10;
+     int * const pValue=&value;
+     cout<<value<<endl;
+ }
+
+/**
+ * @brief 보통 참조형은 매개변수용으로 자주 사용한다.
+*/
+ void MyPointerModule:: WhatIsReferrenceOperation()
+ {
+     int value = 5; // normal integer 
+     int& ref = value; // reference to variable value 
+     value = 6; // value is now 6 
+     ref = 7; // value is now 7 
+     std::cout << value; // prints 7 ++ref; 
+     std::cout << value; // prints 8
+
+     cout << &value; // prints 0012FF7C 
+     cout << &ref; // prints 0012FF7C
+
+ }
+
+ void MyPointerModule::ArgReferenceTest1(const int & arg)
+ {
+     int value =10;
+     //arg=value; 이거 안되죠
+     cout<<arg;
+ }
