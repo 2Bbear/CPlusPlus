@@ -14,5 +14,6 @@ int main()
 void DoPointerModule()
 {
     MyPointerModule mpm;
-    mpm.PointerNulptr_tTest1(nullptr);
+    mpm.STDCOUTcharPointerErrorTest1();
 }
+
