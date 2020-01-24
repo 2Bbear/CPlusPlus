@@ -1,9 +1,14 @@
 #include <iostream>
 #include<cstddef>
+#include <functional>
+
 using namespace std;
 
 class MyPointerModule
 {
+
+private:
+    
 public:
     void PointerRefferenceTest1();
     void PointerAndArrayTest1();
@@ -17,4 +22,9 @@ public:
     void WhatIsConstPointerTest1();
     void WhatIsReferrenceOperation();
     void ArgReferenceTest1(const int & arg);
+    void HowToUseRaged_loopTest1();
+    void HowToUseRaged_loodTest1UseAutoKeyWord();
+    bool testFunc(int a, int b);
+    void HowToUseFunctionoPointerTest1();
+    
 };

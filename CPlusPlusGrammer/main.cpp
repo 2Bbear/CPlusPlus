@@ -14,6 +14,6 @@ int main()
 void DoPointerModule()
 {
     MyPointerModule mpm;
-    mpm.DynamicArrayInitializeTest1();
+    mpm.HowToUseFunctionoPointerTest1();
 }
 
