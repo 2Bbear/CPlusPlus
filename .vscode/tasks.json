@@ -14,8 +14,10 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
-                "CPlusPlusGrammer/pointer/**"
-                
+                "CPlusPlusGrammer/pointer/**",
+                "CPlusPlusDesignPattern/CommandPattern/CommandPattern.cpp",
+                "CPlusPlusDesignPattern/PatternTestInterface.h",
+                "CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.cpp"
             ],
             "group": {
                 "kind": "build",
