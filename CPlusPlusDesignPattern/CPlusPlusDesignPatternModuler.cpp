@@ -12,7 +12,6 @@ void CPlusCPlusDesignPatternModuler::DoModule()
 
 CPlusCPlusDesignPatternModuler::CPlusCPlusDesignPatternModuler(ePatternType _ePType)
 {
-    ePType=_ePType;
     SetPB(ePType);
     
 }

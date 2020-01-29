@@ -1,12 +1,12 @@
 #include "main.h"
 #include "CplusPlusGrammer/pointer/MyPointerModule.h"
 #include "CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.h"
-
 #include<iostream>
+
 
 int main()
 {
-    printf("main is started!!\n");
+    printf("main is started!!dd\n");
     DoDesignPatternModule();
     return 0;
 }

@@ -13,11 +13,11 @@
             "args": [
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
-                "CPlusPlusGrammer/pointer/**",
-                "CPlusPlusDesignPattern/CommandPattern/CommandPattern.cpp",
-                "CPlusPlusDesignPattern/PatternTestInterface.h",
-                "CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.cpp"
+                "실행프로그램", //만들어질 실행파일 이름
+                "${workspaceFolder}/CPlusPlusGrammer/pointer/**",
+                "${workspaceFolder}/CPlusPlusDesignPattern/CommandPattern/*",//폴더 안에 폴더가 있는 경우. 
+                "${workspaceFolder}/CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.cpp"
+                
             ],
             "group": {
                 "kind": "build",
@@ -68,7 +68,7 @@
             "group": "test",
             "args": [
                 "/C",
-                "${fileDirname}\\${fileBasenameNoExtension}"
+                "${fileDirname}\\실행프로그램"
             ]
         },
         {
