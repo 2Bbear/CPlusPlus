@@ -2,17 +2,18 @@
 
 class BaseSTLTester;
 
-class CPlusCPlusDesignPatternModuler
+class CPlusPlusSTLModuler
 {
 public:
     enum eSTLType
     {
-        templaterTest,
+        templateTest,
     };
 private:
     BaseSTLTester * pSTLTester;
 public:
-    CPlusCPlusDesignPatternModuler(eSTLType _eStlType);
+    CPlusPlusSTLModuler(eSTLType _eStlType);
+    ~ CPlusPlusSTLModuler();
     void DoModule();
 private:
     void SetpSTLTester(eSTLType _eStlType);

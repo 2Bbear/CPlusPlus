@@ -16,7 +16,8 @@
                 "실행프로그램", //만들어질 실행파일 이름
                 "${workspaceFolder}/CPlusPlusGrammer/pointer/**",
                 "${workspaceFolder}/CPlusPlusDesignPattern/CommandPattern/*",//폴더 안에 폴더가 있는 경우. 
-                "${workspaceFolder}/CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.cpp"
+                "${workspaceFolder}/CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.cpp",
+                "${workspaceFolder}/CPlusPlusSTL/**"
                 
             ],
             "group": {

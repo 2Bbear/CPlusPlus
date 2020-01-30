@@ -1,22 +1,28 @@
 #include"CPlusPlusSTLModuler.h"
 #include"BaseSTLTester.h"
 
-CPlusCPlusDesignPatternModuler::CPlusCPlusDesignPatternModuler(eSTLType _eStlType)
+#include "TestTemplate.h"
+
+CPlusPlusSTLModuler::CPlusPlusSTLModuler(eSTLType _eStlType)
 {
     SetpSTLTester(_eStlType);
 }
-void CPlusCPlusDesignPatternModuler::DoModule()
+CPlusPlusSTLModuler::~CPlusPlusSTLModuler()
+{
+    delete pSTLTester;
+}
+void CPlusPlusSTLModuler::DoModule()
 {
     pSTLTester->DoTest();
 }
 
-void CPlusCPlusDesignPatternModuler::SetpSTLTester(eSTLType _eStlType)
+void CPlusPlusSTLModuler::SetpSTLTester(eSTLType _eStlType)
 {
     switch (_eStlType)
     {
-    case eSTLType::templaterTest:
+    case eSTLType::templateTest:
     {
-        pSTLTester=nullptr;
+        pSTLTester=new TestTemplate();
     } break;
     default:
         break;

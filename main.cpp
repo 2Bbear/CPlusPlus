@@ -1,6 +1,7 @@
 #include "main.h"
 #include "CplusPlusGrammer/pointer/MyPointerModule.h"
 #include "CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.h"
+#include "CPlusPlusSTL/CPlusPlusSTLModuler.h"
 #include<iostream>
 
 
@@ -22,4 +23,10 @@ void DoDesignPatternModule()
     CPlusCPlusDesignPatternModuler DPM(CPlusCPlusDesignPatternModuler::ePatternType::commandPattern);
     DPM.DoModule();
     
+}
+
+void DoSTLModule()
+{
+    CPlusPlusSTLModuler cppStl(CPlusPlusSTLModuler::eSTLType::templateTest);
+    cppStl.DoModule();
 }
