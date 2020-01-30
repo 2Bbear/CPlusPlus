@@ -34,5 +34,21 @@ void TestTemplate::TestExp()
 }
 void TestTemplate::TestMoney()
 {
+    Stack<__int64> kStackMoney;
+    int Count=0;
+    cout << "첫번째 게임 종료- 현재 돈 1000023" << endl;
+    kStackMoney.push( 1000023 );
 
+    cout << "두번째 게임 종료- 현재 돈 1000234" << endl;
+    kStackMoney.push( 1000234 );
+
+    cout << "세번째 게임 종료- 현재 돈 1000145" << endl;
+    kStackMoney.push( 1000145 );
+
+
+    Count = kStackMoney.Count();
+    for( int i = 0; i < Count; ++i )
+    {
+        cout << "현재 돈->" << kStackMoney.pop() << endl;
+    }
 }
