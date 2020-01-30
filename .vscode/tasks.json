@@ -11,7 +11,7 @@
             "label": "save and compile for C++",
             "command": "g++",
             "args": [
-                "${file}",
+                "${workspaceFolder}/main.cpp",//"${file}",
                 "-o",
                 "실행프로그램", //만들어질 실행파일 이름
                 "${workspaceFolder}/CPlusPlusGrammer/pointer/**",
@@ -69,7 +69,7 @@
             "group": "test",
             "args": [
                 "/C",
-                "${fileDirname}\\실행프로그램"
+                "${workspaceFolder}\\실행프로그램"
             ]
         },
         {

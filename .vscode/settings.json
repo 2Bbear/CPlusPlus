@@ -55,6 +55,8 @@
         "string_view": "cpp",
         "tuple": "cpp",
         "fstream": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "terminal.integrated.shellArgs.windows": ["/K", "chcp 65001"]
     }
+    
 }
