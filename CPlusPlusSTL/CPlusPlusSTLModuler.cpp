@@ -1,7 +1,10 @@
-#include"CPlusPlusSTLModuler.h"
+
 #include"BaseSTLTester.h"
+#include"TestLinkedList.h"
 
 #include "TestTemplate.h"
+
+#include"CPlusPlusSTLModuler.h"
 
 CPlusPlusSTLModuler::CPlusPlusSTLModuler(eSTLType _eStlType)
 {
@@ -24,6 +27,10 @@ void CPlusPlusSTLModuler::SetpSTLTester(eSTLType _eStlType)
     {
         pSTLTester=new TestTemplate();
     } break;
+    case eSTLType::linkedList:
+    {
+        pSTLTester = new TestLinkedList();
+    }break;
     default:
         break;
     }

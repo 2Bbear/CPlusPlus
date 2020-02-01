@@ -8,6 +8,7 @@ public:
     enum eSTLType
     {
         templateTest,
+        linkedList,
     };
 private:
     BaseSTLTester * pSTLTester;
