@@ -3,6 +3,18 @@
 
 #include "BaseSTLTester.h"
 
+/**
+ * @brief 캐릭터 정보를 담고 있는 구조체
+ * 
+ */
+struct CharacterInfo
+{
+    int lv;
+    char * name;
+
+};
+
+
 
 /**
  * @brief 
@@ -21,7 +33,11 @@ public:
 public:
     virtual void DoTest()override;
 private:
+    void BasicVectorTest();
     void TestAssignVector();
+    void TestEndItrVector();
+    void TestSwqpVector();
+    void TestCharacter();
 
 };
 
