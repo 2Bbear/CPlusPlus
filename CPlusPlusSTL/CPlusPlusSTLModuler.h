@@ -1,4 +1,5 @@
-#pragma once
+#ifndef  CPlusPlusSTLModuler_h
+#define CPlusPlusSTLModuler_h
 
 class BaseSTLTester;
 
@@ -9,6 +10,7 @@ public:
     {
         templateTest,
         linkedList,
+        vector,
     };
 private:
     BaseSTLTester * pSTLTester;
@@ -19,3 +21,4 @@ public:
 private:
     void SetpSTLTester(eSTLType _eStlType);
 };
+#endif

@@ -1,10 +1,11 @@
-#pragma once
+#ifndef  TestTemplate_h
+#define TestTemplate_h
 
 #include <stdint.h> 
 
 #include "BaseSTLTester.h"
 
-// 경험치를 저장할 수 있는 최대 개수
+// 경험치�?? ????��?�� ?�� ?��?�� 최�?? 개수
 const int MAX_EXP_COUNT = 100;
 
 class ExpStack
@@ -15,50 +16,50 @@ class ExpStack
     Clear();
   }
 
-  // 초기화 한다.
+  // 초기?�� ?��?��.
   void Clear()
   {
     m_Count = 0;
   }
 
-  // 스택에 저장된 개수
+  // ?��?��?�� ????��?�� 개수
   int Count()
   {
     return m_Count;
   }
 
-        // 저장된 데이터가 없는가?
+        // ????��?�� ?��?��?���?? ?��?���???
   bool IsEmpty()
   {
     return 0 == m_Count ? true : false;
   }
 
-  // 경험치를 저장한다.
+  // 경험치�?? ????��?��?��.
   bool push( float Exp )
   {
-    // 저장할 수 있는 개수를 넘는지 조사한다.
+    // ????��?�� ?�� ?��?�� 개수�?? ?��?���?? 조사?��?��.
     if( m_Count >= MAX_EXP_COUNT )
     {
       return false;
     }
 
-    // 경험치를 저장 후 개수를 하나 늘린다.
+    // 경험치�?? ????�� ?�� 개수�?? ?��?�� ?��린다.
     m_aData[ m_Count ] = Exp;
     ++m_Count;
 
     return true; 
   }
 
-  // 스택에서 경험치를 빼낸다.
+  // ?��?��?��?�� 경험치�?? 빼낸?��.
   float pop()
   {
-    // 저장된 것이 없다면 0.0f를 반환한다.
+    // ????��?�� 것이 ?��?���?? 0.0f�?? 반환?��?��.
     if( m_Count  < 1 )
     {
       return 0.0f;
     }
 
-    // 개수를 하나 감소 후 반환한다.
+    // 개수�?? ?��?�� 감소 ?�� 반환?��?��.
     --m_Count;
     return m_aData[ m_Count ];
   }
@@ -68,10 +69,10 @@ private:
   int    m_Count;
 };
 
-// 돈을 저장할 수 있는 최대 개수
+// ?��?�� ????��?�� ?�� ?��?�� 최�?? 개수
 const int MAX_MONEY_COUNT = 100;
 
-// 돈 저장 스택 클래스
+// ?�� ????�� ?��?�� ?��?��?��
 class MoneyStack
 {
 public:
@@ -80,50 +81,50 @@ public:
     Clear();
   }
 
-  // 초기화 한다.
+  // 초기?�� ?��?��.
   void Clear()
   {
     m_Count = 0;
   }
 
-  // 스택에 저장된 개수
+  // ?��?��?�� ????��?�� 개수
   int Count()
   {
     return m_Count;
   }
 
-  // 저장된 데이터가없는가?
+  // ????��?�� ?��?��?���???��?���???
   bool IsEmpty()
   {
     return 0 == m_Count ? true : false;
   }
 
-  // 돈을 저장한다.
+  // ?��?�� ????��?��?��.
   bool push( __int64 Money )
   {
-    // 저장 할 수 있는 개수를 넘는지 조사한다.
+    // ????�� ?�� ?�� ?��?�� 개수�?? ?��?���?? 조사?��?��.
     if( m_Count >= MAX_MONEY_COUNT )
     {
       return false;
     }
 
-    // 저장후 개수를 하나 늘린다.
+    // ????��?�� 개수�?? ?��?�� ?��린다.
     m_aData[ m_Count ] = Money;
     ++m_Count;
 
     return true; 
   }
 
-  // 스택에서 돈을 빼낸다.
+  // ?��?��?��?�� ?��?�� 빼낸?��.
   __int64 pop()
   {
-    // 저장된 것이 없다면 0을 반환한다.
+    // ????��?�� 것이 ?��?���?? 0?�� 반환?��?��.
     if( m_Count  < 1 )
     {
       return 0;
     }
 
-    // 개수를 하나 감소 후 반환한다.
+    // 개수�?? ?��?�� 감소 ?�� 반환?��?��.
     --m_Count;
     return m_aData[ m_Count ];
   }
@@ -143,50 +144,50 @@ public:
     Clear();
   }
 
-  // 초기화 한다.
+  // 초기?�� ?��?��.
   void Clear()
   {
     m_Count = 0;
   }
 
-  // 스택에 저장된 개수
+  // ?��?��?�� ????��?�� 개수
   int Count()
   {
     return m_Count;
   }
 
-  // 저장된 데이터가 없는가?
+  // ????��?�� ?��?��?���?? ?��?���???
   bool IsEmpty()
   {
     return 0 == m_Count ? true : false;
   }
 
-  // 데이터를 저장한다.
+  // ?��?��?���?? ????��?��?��.
   bool push( T data )
   {
-    // 저장 할수 있는 개수를 넘는지 조사한다.
+    // ????�� ?��?�� ?��?�� 개수�?? ?��?���?? 조사?��?��.
     if( m_Count >= MAX_COUNT )
     {
       return false;
     }
 
-    // 저장후 개수를 하나 늘린다.
+    // ????��?�� 개수�?? ?��?�� ?��린다.
     m_aData[ m_Count ] = data;
     ++m_Count;
 
     return true; 
   }
 
-  // 스택에서 빼낸다.
+  // ?��?��?��?�� 빼낸?��.
   T pop()
   {
-    // 저장된 것이 없다면 0을 반환한다.
+    // ????��?�� 것이 ?��?���?? 0?�� 반환?��?��.
     if( m_Count  < 1 )
     {
       return 0;
     }
 
-    // 개수를 하나 감소 후 반환한다.
+    // 개수�?? ?��?�� 감소 ?�� 반환?��?��.
     --m_Count;
     return m_aData[ m_Count ];
   }
@@ -205,3 +206,5 @@ private:
     void TestExp();
     void TestMoney();
 };
+
+#endif

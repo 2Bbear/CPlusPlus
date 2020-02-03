@@ -29,6 +29,6 @@ void DoDesignPatternModule()
 
 void DoSTLModule()
 {
-    CPlusPlusSTLModuler cppStl(CPlusPlusSTLModuler::eSTLType::linkedList);
+    CPlusPlusSTLModuler cppStl(CPlusPlusSTLModuler::eSTLType::vector);
     cppStl.DoModule();
 }

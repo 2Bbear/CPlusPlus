@@ -1,6 +1,7 @@
 
 #include"BaseSTLTester.h"
 #include"TestLinkedList.h"
+#include "TestVector.h"
 
 #include "TestTemplate.h"
 
@@ -30,6 +31,10 @@ void CPlusPlusSTLModuler::SetpSTLTester(eSTLType _eStlType)
     case eSTLType::linkedList:
     {
         pSTLTester = new TestLinkedList();
+    }break;
+    case eSTLType::vector:
+    {
+        pSTLTester= new TestVector();
     }break;
     default:
         break;
