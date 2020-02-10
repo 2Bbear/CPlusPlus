@@ -85,15 +85,15 @@ void TestVector::TestCharacter()
     //유저 1
     CharacterInfo user1;
     user1.lv=10;
-    user1.name="Bill";
+    //user1.name="Bill";
     //유저 2 
     CharacterInfo user2;
     user2.lv=80;
-    user2.name="Bill";
+    //user2.name="Bill";
     //유저 3
     CharacterInfo user3;
     user3.lv=22;
-    user3.name="Bill";
+    //user3.name="Bill";
 
     vector<CharacterInfo> roomUserList;
     roomUserList.push_back(user1);

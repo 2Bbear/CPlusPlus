@@ -2,6 +2,7 @@
 #include"BaseSTLTester.h"
 #include"TestLinkedList.h"
 #include "TestVector.h"
+#include "TestDeque.h"
 
 #include "TestTemplate.h"
 
