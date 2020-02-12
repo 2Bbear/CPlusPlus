@@ -3,6 +3,7 @@
 #include"TestLinkedList.h"
 #include "TestVector.h"
 #include "TestDeque.h"
+#include "TestHashMap.h"
 
 #include "TestTemplate.h"
 
@@ -36,6 +37,10 @@ void CPlusPlusSTLModuler::SetpSTLTester(eSTLType _eStlType)
     case eSTLType::vector:
     {
         pSTLTester= new TestVector();
+    }break;
+    case eSTLType::hashmap:
+    {
+        pSTLTester = new TestHashMap();
     }break;
     default:
         break;

@@ -11,6 +11,8 @@ public:
         templateTest,
         linkedList,
         vector,
+        deque,
+        hashmap
     };
 private:
     BaseSTLTester * pSTLTester;

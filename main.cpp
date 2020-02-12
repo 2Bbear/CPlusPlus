@@ -29,6 +29,6 @@ void DoDesignPatternModule()
 
 void DoSTLModule()
 {
-    CPlusPlusSTLModuler cppStl(CPlusPlusSTLModuler::eSTLType::vector);
+    CPlusPlusSTLModuler cppStl(CPlusPlusSTLModuler::eSTLType::hashmap);
     cppStl.DoModule();
 }
