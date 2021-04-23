@@ -11,10 +11,13 @@
             "label": "save and compile for C++",
             "command": "g++",
             "args": [
-                "${file}",
+                "${workspaceFolder}/main.cpp",//"${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
-                "CPlusPlusGrammer/pointer/**"
+                "실행프로그램", //만들어질 실행파일 이름
+                "${workspaceFolder}/CPlusPlusGrammer/pointer/**",
+                "${workspaceFolder}/CPlusPlusDesignPattern/CommandPattern/*",//폴더 안에 폴더가 있는 경우. 
+                "${workspaceFolder}/CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.cpp",
+                "${workspaceFolder}/CPlusPlusSTL/**"
                 
             ],
             "group": {
@@ -66,7 +69,7 @@
             "group": "test",
             "args": [
                 "/C",
-                "${fileDirname}\\${fileBasenameNoExtension}"
+                "${workspaceFolder}\\실행프로그램"
             ]
         },
         {

@@ -132,3 +132,50 @@ void MyPointerModule::WhatIsdanglingpointerTest1()
      //arg=value; 이거 안되죠
      cout<<arg;
  }
+
+ void MyPointerModule::HowToUseRaged_loopTest1()
+ {
+     int intArr []={1,2,3,4,5,6,7,8,9,10};
+
+     for(int t: intArr)
+     {
+         cout<<t<<endl;
+     }
+ }
+
+ void MyPointerModule::HowToUseRaged_loodTest1UseAutoKeyWord()
+ {
+    int intArr []={1,2,3,4,5,6,7,8,9,0};
+
+    //사용하는 비용을 감소하기 위해 참조를 해야 했고, 혹시나 값을 변경 할 수도 있으니
+    //Const를 걸어 변경하지 못하게 한다.
+    for(const auto& t : intArr)
+    {
+        cout<< t<< endl;
+    }
+ }
+
+bool MyPointerModule::testFunc(int a, int b)
+{
+    return true;
+}
+bool TestFunctionForFunctionPointer(int a, int b)
+{
+    return false;
+}
+/**
+ * @brief 클래스 안의 멤버 함수를 함수 포인터에 담는 방법
+ * 아니,,,매개변수에 해당 클래스명을 넣어주는데,
+ * 그러다 보니 실행시킬때 *this로 자기 자신 값을 넘겨 주어야 함.
+ * 이 메소드는 전역 함수와, 클래스 멤버 함수를 담는 코드가 있다.
+*/
+ void MyPointerModule::HowToUseFunctionoPointerTest1()
+ {
+     std::function<bool (int , int)> funcPtr1;
+     funcPtr1=TestFunctionForFunctionPointer;
+
+     std::function<bool (MyPointerModule&,int,int)> funcPtr2=testFunc;
+
+     cout<<funcPtr1(1,2)<<endl;
+     cout<<funcPtr2(*this,2,3)<<endl;
+ }
