@@ -13,6 +13,8 @@ c++문법과, 모듈등을 실험하는 프로젝트입니다.
     자료구조에 대한 프로젝트
 3. ConcurrentProgramProject
     동시성 프로그램 프로젝트
+4. C++DesignPattern 
+    디자인 패턴에 대한 프로젝트
 
 # VisualStudio Code accel
 단축키
