@@ -143,18 +143,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="call_onceTest.cpp" />
     <ClCompile Include="ConcurrentProgramProject.cpp" />
+    <ClCompile Include="constexpr_Test.cpp" />
     <ClCompile Include="FenceTest.cpp" />
+    <ClCompile Include="shared_lockTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="unique_mutexTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="call_onceTest.h" />
+    <ClInclude Include="constexpr_Test.h" />
     <ClInclude Include="FenceTest.h" />
+    <ClInclude Include="shared_lockTest.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="unique_mutexTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
