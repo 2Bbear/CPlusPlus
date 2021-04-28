@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="call_onceTest.cpp" />
     <ClCompile Include="ConcurrentProgramProject.cpp" />
+    <ClCompile Include="conditionVariableBlockTest.cpp" />
     <ClCompile Include="constexpr_Test.cpp" />
     <ClCompile Include="FenceTest.cpp" />
     <ClCompile Include="shared_lockTest.cpp" />
@@ -158,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="call_onceTest.h" />
+    <ClInclude Include="conditionVariableBlockTest.h" />
     <ClInclude Include="constexpr_Test.h" />
     <ClInclude Include="FenceTest.h" />
     <ClInclude Include="shared_lockTest.h" />

@@ -2,6 +2,10 @@
 namespace call_onceTest
 {
 	void Doit();
+	
+	/*
+	스레드 안전한 싱글톤
+	*/
 	class MySingleton
 	{
 	private:
@@ -32,5 +36,29 @@ namespace call_onceTest
 		std::cout << "MySingleton::getInstance(): " << MySingleton::getInstance() << std::endl;
 	}
 
+	/*
+	컴파일러별로 정적 블록에 대한 시맨틱이 안전하게 구성되는지 확인해야 한다. gcc를 쓸경우...허미
+	*/
+	class MeyersSingleton
+	{
+	public:
+		static MeyersSingleton& getInstance()
+		{
+			static MeyersSingleton instance;
+			return instance;
+		}
+	private:
+		MeyersSingleton();
+		~MeyersSingleton();
+		MeyersSingleton(const MeyersSingleton&) = delete;
+		MeyersSingleton& operator=(const MeyersSingleton&) = delete; //복사생성자 못하도록 막음
+	};
+	MeyersSingleton::MeyersSingleton() = default; // 이건 무슨 문법이지?
+	MeyersSingleton::~MeyersSingleton() = default;
+
+	void Doit3()
+	{
+		MeyersSingleton::getInstance();
+	}
 }
 
