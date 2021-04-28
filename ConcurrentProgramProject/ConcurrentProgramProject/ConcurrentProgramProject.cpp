@@ -4,7 +4,8 @@
 #include "unique_mutexTest.h"
 #include "constexpr_Test.h"
 #include "conditionVariableBlockTest.h"
+#include "TaskTest.h"
 int main()
 {
-	conditionVariableBlockTest::Doit2();
+	TaskTest::Doit();
 }
