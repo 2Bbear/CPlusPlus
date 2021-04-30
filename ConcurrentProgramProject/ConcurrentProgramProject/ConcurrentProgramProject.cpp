@@ -7,5 +7,5 @@
 #include "TaskTest.h"
 int main()
 {
-	TaskTest::Doit();
+	TaskTest::Doit5();
 }
