@@ -20,3 +20,7 @@ c++문법과, 모듈등을 실험하는 프로젝트입니다.
 단축키
 build   : ctrl + shift + B
 excute  : ctrl + alt + C 
+
+
+# History
+2021.04.30 : github와 동시 원격 서버 설정
