@@ -5,7 +5,8 @@
 #include "constexpr_Test.h"
 #include "conditionVariableBlockTest.h"
 #include "TaskTest.h"
+#include "Memory_order_relexedTest.h"
 int main()
 {
-	TaskTest::Doit5();
+	Memory_order_relexedTest::Doit();
 }
