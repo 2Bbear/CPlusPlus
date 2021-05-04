@@ -8,7 +8,8 @@
 #include "Memory_order_relexedTest.h"
 #include "Memory_order_acquireTest.h"
 #include "Memory_order_seq_cstTest.h"
+#include "MemoryOrderPractice.h"
 int main()
 {
-	Memory_order_acquireTest::Doit();
+	Memory_order_relexedTest::Doit();
 }

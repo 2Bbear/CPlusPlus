@@ -6,6 +6,7 @@ namespace Memory_order_relexedTest
 	최적화를 끄고 테스트 하면 cpu 순서 재정렬 현상을 관람할 수 있습니다.
 	만약 x= 0, y=0이 뜬다면 cpu가 순서를 재정렬했다는 것을 추측할 수 있습니다.
 	왜냐면 단일 스레드 관점에서 볼때 x나 y값이 들어가려면 먼저 1이 들어가야 하기 때문입니다.
+	그럼에도 0, 0이 되는 경우는 찾기 힘들었다....
 	*/
 	void Doit();
 	/*
@@ -16,5 +17,6 @@ namespace Memory_order_relexedTest
 	이경우 40000이 나올 것이다. 스레드가 4개니까.
 	*/
 	void Doit2();
+
 };
 

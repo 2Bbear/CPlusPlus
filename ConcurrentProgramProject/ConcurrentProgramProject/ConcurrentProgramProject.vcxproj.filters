@@ -57,6 +57,9 @@
     <ClCompile Include="Memory_order_seq_cstTest.cpp">
       <Filter>메모리오더테스트</Filter>
     </ClCompile>
+    <ClCompile Include="MemoryOrderPractice.cpp">
+      <Filter>메모리오더테스트</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FenceTest.h">
@@ -90,6 +93,9 @@
       <Filter>메모리오더테스트</Filter>
     </ClInclude>
     <ClInclude Include="Memory_order_seq_cstTest.h">
+      <Filter>메모리오더테스트</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryOrderPractice.h">
       <Filter>메모리오더테스트</Filter>
     </ClInclude>
   </ItemGroup>

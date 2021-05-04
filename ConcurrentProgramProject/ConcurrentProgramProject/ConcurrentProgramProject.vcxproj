@@ -276,6 +276,7 @@
     <ClCompile Include="conditionVariableBlockTest.cpp" />
     <ClCompile Include="constexpr_Test.cpp" />
     <ClCompile Include="FenceTest.cpp" />
+    <ClCompile Include="MemoryOrderPractice.cpp" />
     <ClCompile Include="Memory_order_acquireTest.cpp" />
     <ClCompile Include="Memory_order_relexedTest.cpp" />
     <ClCompile Include="Memory_order_seq_cstTest.cpp" />
@@ -298,6 +299,7 @@
     <ClInclude Include="conditionVariableBlockTest.h" />
     <ClInclude Include="constexpr_Test.h" />
     <ClInclude Include="FenceTest.h" />
+    <ClInclude Include="MemoryOrderPractice.h" />
     <ClInclude Include="Memory_order_acquireTest.h" />
     <ClInclude Include="Memory_order_relexedTest.h" />
     <ClInclude Include="Memory_order_seq_cstTest.h" />

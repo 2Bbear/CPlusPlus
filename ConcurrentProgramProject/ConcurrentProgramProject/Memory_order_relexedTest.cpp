@@ -12,30 +12,36 @@ namespace Memory_order_relexedTest
 		b->store(1, memory_order_relaxed);      // b = 1 (쓰기)
 		int x = a->load(memory_order_relaxed);  // x = a (읽기)
 
-		printf("x : %d \n", x);
+		printf("x: %d ", x);
 	}
 
 	void t2(atomic<int>* a, atomic<int>* b) {
 		a->store(1, memory_order_relaxed);      // a = 1 (쓰기)
 		int y = b->load(memory_order_relaxed);  // y = b (읽기)
 
-		printf("y : %d \n", y);
+		printf("y: %d ", y);
 	}
 	
 	void Doit()
 	{
-		cout << "======" << endl;
-		vector<thread> threads;
+		for (int i=0;i<65535;++i)
+		{
+			cout << "======" << endl;
+			vector<thread> threads;
 
-		atomic<int> a(0);
-		atomic<int> b(0);
+			atomic<int> a(0);
+			atomic<int> b(0);
 
-		threads.push_back(thread(t1, &a, &b));
-		threads.push_back(thread(t2, &a, &b));
-
-		for (int i = 0; i < 2; i++) {
-			threads[i].join();
+			threads.push_back(thread(t1, &a, &b));
+			threads.push_back(thread(t2, &a, &b));
+			for (int i = 0; i < threads.size(); i++) {
+				threads[i].join();
+			}
+			cout << endl;
 		}
+		//단순히 멈추기 위함
+		int c;
+		cin >> c;
 		
 	}
 
@@ -63,4 +69,5 @@ namespace Memory_order_relexedTest
 
 		std::cout << "Counter : " << counter << std::endl;
 	}
+
 }
