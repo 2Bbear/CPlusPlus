@@ -280,6 +280,7 @@
     <ClCompile Include="Memory_order_acquireTest.cpp" />
     <ClCompile Include="Memory_order_relexedTest.cpp" />
     <ClCompile Include="Memory_order_seq_cstTest.cpp" />
+    <ClCompile Include="MySpinlock.cpp" />
     <ClCompile Include="shared_lockTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -303,6 +304,7 @@
     <ClInclude Include="Memory_order_acquireTest.h" />
     <ClInclude Include="Memory_order_relexedTest.h" />
     <ClInclude Include="Memory_order_seq_cstTest.h" />
+    <ClInclude Include="MySpinlock.h" />
     <ClInclude Include="shared_lockTest.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TaskTest.h" />

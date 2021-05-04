@@ -19,6 +19,12 @@
     <Filter Include="메모리오더테스트">
       <UniqueIdentifier>{bf0d17bf-7c82-4c1d-9a0b-7d03e047e90a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="스핀락">
+      <UniqueIdentifier>{c681536c-4146-4972-ab13-ad6cd69ec6c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="프로미스와퓨쳐">
+      <UniqueIdentifier>{4439954a-c7a8-4cbe-a883-eca8588eb883}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConcurrentProgramProject.cpp">
@@ -60,6 +66,9 @@
     <ClCompile Include="MemoryOrderPractice.cpp">
       <Filter>메모리오더테스트</Filter>
     </ClCompile>
+    <ClCompile Include="MySpinlock.cpp">
+      <Filter>스핀락</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FenceTest.h">
@@ -97,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="MemoryOrderPractice.h">
       <Filter>메모리오더테스트</Filter>
+    </ClInclude>
+    <ClInclude Include="MySpinlock.h">
+      <Filter>스핀락</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
