@@ -16,7 +16,7 @@
     <Filter Include="PCH">
       <UniqueIdentifier>{17052272-1830-4613-9125-25eb4d58880c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="메모리오더">
+    <Filter Include="메모리오더테스트">
       <UniqueIdentifier>{bf0d17bf-7c82-4c1d-9a0b-7d03e047e90a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -49,7 +49,13 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Memory_order_relexedTest.cpp">
-      <Filter>메모리오더</Filter>
+      <Filter>메모리오더테스트</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory_order_acquireTest.cpp">
+      <Filter>메모리오더테스트</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory_order_seq_cstTest.cpp">
+      <Filter>메모리오더테스트</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,7 +84,13 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Memory_order_relexedTest.h">
-      <Filter>메모리오더</Filter>
+      <Filter>메모리오더테스트</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory_order_acquireTest.h">
+      <Filter>메모리오더테스트</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory_order_seq_cstTest.h">
+      <Filter>메모리오더테스트</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

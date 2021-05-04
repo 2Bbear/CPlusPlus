@@ -6,7 +6,9 @@
 #include "conditionVariableBlockTest.h"
 #include "TaskTest.h"
 #include "Memory_order_relexedTest.h"
+#include "Memory_order_acquireTest.h"
+#include "Memory_order_seq_cstTest.h"
 int main()
 {
-	Memory_order_relexedTest::Doit();
+	Memory_order_acquireTest::Doit();
 }
