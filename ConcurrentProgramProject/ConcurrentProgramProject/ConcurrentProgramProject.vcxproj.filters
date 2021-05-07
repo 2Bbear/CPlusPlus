@@ -25,6 +25,9 @@
     <Filter Include="프로미스와퓨쳐">
       <UniqueIdentifier>{4439954a-c7a8-4cbe-a883-eca8588eb883}</UniqueIdentifier>
     </Filter>
+    <Filter Include="피터슨알고리즘">
+      <UniqueIdentifier>{cab70382-512c-49c5-a294-113ed651cb86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConcurrentProgramProject.cpp">
@@ -69,6 +72,12 @@
     <ClCompile Include="MySpinlock.cpp">
       <Filter>스핀락</Filter>
     </ClCompile>
+    <ClCompile Include="PromiseAndFutureTest.cpp">
+      <Filter>프로미스와퓨쳐</Filter>
+    </ClCompile>
+    <ClCompile Include="PetersonsAlgorithm.cpp">
+      <Filter>피터슨알고리즘</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FenceTest.h">
@@ -109,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="MySpinlock.h">
       <Filter>스핀락</Filter>
+    </ClInclude>
+    <ClInclude Include="PromiseAndFutureTest.h">
+      <Filter>프로미스와퓨쳐</Filter>
+    </ClInclude>
+    <ClInclude Include="PetersonsAlgorithm.h">
+      <Filter>피터슨알고리즘</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
