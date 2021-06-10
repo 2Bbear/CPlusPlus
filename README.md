@@ -24,4 +24,5 @@ excute  : ctrl + alt + C
 
 # History
 2021.04.30 : github와 동시 원격 서버 설정
+
 2021.06.10 : pc위치 변경
