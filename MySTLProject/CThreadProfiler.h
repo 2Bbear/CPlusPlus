@@ -3,7 +3,7 @@
 #pragma region 테스트코드
 /*
 테스트 코드
-CProfiler profile(true);
+CThreadProfiler profile(true);
 
 void Test1()
 {
@@ -72,7 +72,7 @@ int main()
 #define CProfiler_MaxNameSize 64
 
 
-class CProfiler
+class CThreadProfiler
 {
 public:
     struct PROFILE_SAMPLE
@@ -92,8 +92,10 @@ public:
     };
     struct ThreadSample
     {
-        std::list<PROFILE_SAMPLE> datalist;
+        std::list<PROFILE_SAMPLE>* datalist;
         int threadID;
+        ThreadSample();
+        ~ThreadSample();
     };
     struct TOTALPROFILE_SAMPLE
     {
@@ -101,8 +103,8 @@ public:
         int count = 0;
     };
 public:
-    CProfiler(bool _isCalTotalThread=false);
-    ~CProfiler();
+    CThreadProfiler(bool _isCalTotalThread=false);
+    ~CThreadProfiler();
 public:
     ThreadSample g_threadSample[1000];//스레드 갯수에 맞춰야함. 혹은 실제 사용 스레드 수 보다 많아야 함.
 private:
@@ -121,7 +123,7 @@ public:
 // 전체 스레드 평균을 내기 위한 코드
 private:
     bool isCalTotalThread = false;
-    std::list<TOTALPROFILE_SAMPLE> totaldataList;
+    std::list<TOTALPROFILE_SAMPLE>* totaldataList;
     //프로파일 데이터 통합하고 정리하는 함수
     void IntegrtingInformation();
     TOTALPROFILE_SAMPLE* FindFuncInTotalDataList(WCHAR * funcName);

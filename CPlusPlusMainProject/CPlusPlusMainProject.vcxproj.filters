@@ -69,7 +69,7 @@
     <ClCompile Include="..\MySTLProject\CPacketPtr.cpp">
       <Filter>외부코드\MySTL</Filter>
     </ClCompile>
-    <ClCompile Include="..\MySTLProject\CProfiler.cpp">
+    <ClCompile Include="..\MySTLProject\CThreadProfiler.cpp">
       <Filter>외부코드\MySTL</Filter>
     </ClCompile>
     <ClCompile Include="..\MySTLProject\CSession.cpp">
@@ -176,7 +176,7 @@
     <ClInclude Include="..\MySTLProject\CPacketPtr.h">
       <Filter>외부코드\MySTL</Filter>
     </ClInclude>
-    <ClInclude Include="..\MySTLProject\CProfiler.h">
+    <ClInclude Include="..\MySTLProject\CThreadProfiler.h">
       <Filter>외부코드\MySTL</Filter>
     </ClInclude>
     <ClInclude Include="..\MySTLProject\CSession.h">

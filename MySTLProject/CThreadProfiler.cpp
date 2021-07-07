@@ -1,23 +1,32 @@
-#include "stdafx.h"
+#include <list>
+#include <Windows.h>
+#include <iostream>
 
 #include "FileManager.h"
-#include "CProfiler.h"
+#include "CThreadProfiler.h"
 using namespace FileMangerSpace;
 
 static const  char* filename = "../PerformanceProfileLog.txt"; //로그 파일 이름
 
 
-CProfiler::CProfiler(bool _isCalTotalThread )
+CThreadProfiler::CThreadProfiler(bool _isCalTotalThread )
 {
     tlsIdx=TlsAlloc();
     isCalTotalThread = _isCalTotalThread;
+
+    totaldataList = nullptr;
+    totaldataList = new std::list<TOTALPROFILE_SAMPLE>();
 }
 
-CProfiler::~CProfiler()
+CThreadProfiler::~CThreadProfiler()
 {
+    if (totaldataList!=nullptr)
+    {
+        delete totaldataList;
+    }
 }
 
-CProfiler::ThreadSample* CProfiler::GetSample()
+CThreadProfiler::ThreadSample* CThreadProfiler::GetSample()
 {
     ThreadSample* p = (ThreadSample*)TlsGetValue(tlsIdx);
     if (p == nullptr)
@@ -28,12 +37,12 @@ CProfiler::ThreadSample* CProfiler::GetSample()
     }
     return p;
 }
-void CProfiler::ProfileBegin(const WCHAR* _str)
+void CThreadProfiler::ProfileBegin(const WCHAR* _str)
 {
     ThreadSample* p = GetSample();
     if (p == nullptr){ return; }
     //데이터 생성
-    for (PROFILE_SAMPLE& var : p->datalist)
+    for (PROFILE_SAMPLE& var : *(p->datalist))
     {
         if (wcscmp(var.name, _str) == 0)
         {
@@ -48,15 +57,15 @@ void CProfiler::ProfileBegin(const WCHAR* _str)
     QueryPerformanceCounter(&data.lStartTime);
     ++data.iCall;
 
-    p->datalist.push_back(data);
+    p->datalist->push_back(data);
 }
-void CProfiler::ProfileEnd(const WCHAR* _str)
+void CThreadProfiler::ProfileEnd(const WCHAR* _str)
 {
     LARGE_INTEGER Frequency;
     QueryPerformanceFrequency(&Frequency); // 딱히 둘곳이 없어서 이쪽에 둠.
     ThreadSample* p = GetSample();
     if (p == nullptr) { return; }
-    for (PROFILE_SAMPLE& var : p->datalist)
+    for (PROFILE_SAMPLE& var : *(p->datalist))
     {
         if (wcscmp(var.name, _str) == 0)
         {
@@ -99,7 +108,7 @@ void CProfiler::ProfileEnd(const WCHAR* _str)
         }
     }
 }
-bool CProfiler::INT64ToPointString(__int64 _arg, char _temp[50])
+bool CThreadProfiler::INT64ToPointString(__int64 _arg, char _temp[50])
 {
     __int64 num3 = _arg / 1000000;
     _arg -= num3 * 1000000;
@@ -110,11 +119,11 @@ bool CProfiler::INT64ToPointString(__int64 _arg, char _temp[50])
 
 }
 
-void CProfiler::TestPrintProfileDataList()
+void CThreadProfiler::TestPrintProfileDataList()
 {
     ThreadSample* p = GetSample();
     if (p == nullptr) { return; }
-    for (PROFILE_SAMPLE& var : p->datalist)
+    for (PROFILE_SAMPLE& var : *(p->datalist))
     {
         std::wcout << "이름 : " << var.name << std::endl;
         char temp[50] = { 0 };
@@ -137,7 +146,7 @@ void CProfiler::TestPrintProfileDataList()
 
     }
 }
-bool CProfiler::SaveLogIntoFile()
+bool CThreadProfiler::SaveLogIntoFile()
 {
     //threadID | Name  |     Average  |        Min   |        Max   |      Call |
     MakeFile(filename);
@@ -147,7 +156,7 @@ bool CProfiler::SaveLogIntoFile()
         PushBackDataInFile(filename, L"=============================================================================================================\n");
 
         ThreadSample* p = &g_threadSample[i];
-        for (PROFILE_SAMPLE& var : p->datalist)
+        for (PROFILE_SAMPLE& var : *(p->datalist))
         {
             wchar_t wstrArr[400] = { 0 };
             __int64 re = 0;
@@ -185,7 +194,7 @@ bool CProfiler::SaveLogIntoFile()
 
         //스레드 통합 평균 구하기
         IntegrtingInformation();
-        for (TOTALPROFILE_SAMPLE& target : totaldataList)
+        for (TOTALPROFILE_SAMPLE& target : *totaldataList)
         {
             
             wchar_t wstrArr[400] = { 0 };
@@ -222,14 +231,14 @@ bool CProfiler::SaveLogIntoFile()
     return true;
 }
 
-void CProfiler::IntegrtingInformation()
+void CThreadProfiler::IntegrtingInformation()
 {
     //스레드 별로
     for (int i = 0; i < threadSampleIdx; i++)
     {
         ThreadSample* p = &g_threadSample[i];
         //함수 별로
-        for (PROFILE_SAMPLE& var : p->datalist)
+        for (PROFILE_SAMPLE& var : *(p->datalist))
         {
             //같은 이름을 한 함수가 있는지.
             TOTALPROFILE_SAMPLE* pSample = FindFuncInTotalDataList(var.name);
@@ -239,7 +248,7 @@ void CProfiler::IntegrtingInformation()
                 TOTALPROFILE_SAMPLE inputdata;
                 inputdata.count = 0;
                 inputdata.sample = var;
-                totaldataList.push_back(inputdata);
+                totaldataList->push_back(inputdata);
             }
             else
             {
@@ -257,9 +266,9 @@ void CProfiler::IntegrtingInformation()
     }
 }
 
-CProfiler::TOTALPROFILE_SAMPLE* CProfiler::FindFuncInTotalDataList(WCHAR* funcName)
+CThreadProfiler::TOTALPROFILE_SAMPLE* CThreadProfiler::FindFuncInTotalDataList(WCHAR* funcName)
 {
-    for (TOTALPROFILE_SAMPLE& var : totaldataList)
+    for (TOTALPROFILE_SAMPLE& var : *totaldataList)
     {
         if (wcscmp(var.sample.name, funcName) == 0)
         {
@@ -270,4 +279,16 @@ CProfiler::TOTALPROFILE_SAMPLE* CProfiler::FindFuncInTotalDataList(WCHAR* funcNa
     return nullptr;
 }
 
+CThreadProfiler::ThreadSample::ThreadSample()
+{
+    datalist = nullptr;
+    datalist = new std::list<PROFILE_SAMPLE>();
+}
 
+CThreadProfiler::ThreadSample::~ThreadSample()
+{
+    if (datalist!=nullptr)
+    {
+        delete datalist;
+    }
+}
