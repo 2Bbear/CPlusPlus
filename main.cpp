@@ -10,7 +10,7 @@
 int main()
 {
     printf("main is started!!dd\n");
-    DoSTLModule();
+    //DoSTLModule();
     return 0;
 }
 
