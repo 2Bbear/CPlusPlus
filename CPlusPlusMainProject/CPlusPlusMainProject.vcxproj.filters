@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="외부코드">
+      <UniqueIdentifier>{06c1cf78-bceb-4d32-b53d-a34573a23893}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="외부코드\MySTL">
+      <UniqueIdentifier>{110bd451-9b12-4688-a46c-e8a3ebfcb7a2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\MySTLProject\AStarPathFinder.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\BasicBinaryTree.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\BlockManager.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\Bresenham2D.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CChunkFreeListMemoryPool_Stack.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CCrashDump.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CircleQueue.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CLanClient.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CLanServer.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CLockFreeMemoryPool.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CLockFreeQueue.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CLockFreeStack.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CMemoryPoolTLS.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CNetServer.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CPacket.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CPacketPtr.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CProfiler.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CSession.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CustomList.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\CustomQueue.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\ExplicitListFree.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\FileManager.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\ImplicitFreeList.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\JumpPointPathFinder.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\LogManager.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\main.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\memlib.c">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\PerformanceCounter.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\PerformanceProfiler.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\RedBlackTree.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\RingBuffer.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\RingBufferEx.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MySTLProject\SerializationBuffer.cpp">
+      <Filter>외부코드\MySTL</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\MySTLProject\AStarPathFinder.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\BasicBinaryTree.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\BlockManager.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\Bresenham2D.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CChunkFreeListMemoryPool_Stack.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CCrashDump.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CircleQueue.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CLanClient.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CLanServer.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CLockFreeMemoryPool.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CLockFreeQueue.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CLockFreeStack.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CMemoryPoolTLS.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CNetServer.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\ConvertUnicodetoAnsiString.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CPacket.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CPacketPtr.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CProfiler.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CSession.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CustomList.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\CustomQueue.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\ExplicitFreeList.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\FileManager.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\FormatStringSample1.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\FromatStringSample2.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\ImplicitFreeList.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\JumpPointPathFinder.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\LogManager.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\memlib.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\mm_naive.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\PerformanceCounter.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\PerformanceProfiler.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\RedBlackTree.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\RingBuffer.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\RingBufferEx.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MySTLProject\SerializationBuffer.h">
+      <Filter>외부코드\MySTL</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\MySTLProject\JPSUnityExample.txt">
+      <Filter>외부코드\MySTL</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
