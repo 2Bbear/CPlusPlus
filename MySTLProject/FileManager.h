@@ -2,10 +2,6 @@
 #ifndef FileManager_h
 #define FileManager_h
 
-
-
-
-
 namespace FileMangerSpace
 {
 	enum class EFileResultType :int

@@ -1,13 +1,9 @@
-#include <list>
-#include <Windows.h>
 #include <iostream>
-
-#include "FileManager.h"
 #include "CThreadProfiler.h"
+#include "FileManager.h"
 using namespace FileMangerSpace;
-
+using namespace std;
 static const  char* filename = "../PerformanceProfileLog.txt"; //로그 파일 이름
-
 
 CThreadProfiler::CThreadProfiler(bool _isCalTotalThread )
 {
@@ -44,7 +40,7 @@ void CThreadProfiler::ProfileBegin(const WCHAR* _str)
     //데이터 생성
     for (PROFILE_SAMPLE& var : *(p->datalist))
     {
-        if (wcscmp(var.name, _str) == 0)
+        if (wcscmp(var.profileName, _str) == 0)
         {
             QueryPerformanceCounter(&var.lStartTime);
             ++var.iCall;
@@ -52,7 +48,7 @@ void CThreadProfiler::ProfileBegin(const WCHAR* _str)
         }
     }
     PROFILE_SAMPLE data;
-    wcscpy_s(data.name, 64, _str);
+    wcscpy_s(data.profileName, 64, _str);
     data.threadID = GetCurrentThreadId();
     QueryPerformanceCounter(&data.lStartTime);
     ++data.iCall;
@@ -67,7 +63,7 @@ void CThreadProfiler::ProfileEnd(const WCHAR* _str)
     if (p == nullptr) { return; }
     for (PROFILE_SAMPLE& var : *(p->datalist))
     {
-        if (wcscmp(var.name, _str) == 0)
+        if (wcscmp(var.profileName, _str) == 0)
         {
             LARGE_INTEGER Endtime;
             __int64 elapsed;
@@ -125,7 +121,7 @@ void CThreadProfiler::TestPrintProfileDataList()
     if (p == nullptr) { return; }
     for (PROFILE_SAMPLE& var : *(p->datalist))
     {
-        std::wcout << "이름 : " << var.name << std::endl;
+        std::wcout << "이름 : " << var.profileName << std::endl;
         char temp[50] = { 0 };
         INT64ToPointString(var.iTotalTime, temp);
         std::cout << "총시간 : " << temp << std::endl;
@@ -176,7 +172,7 @@ bool CThreadProfiler::SaveLogIntoFile()
 
             swprintf(wstrArr, 400, L"%8.0i| %30s| %10.0f.%06.0f ms | %10.0f.%06.0f ms |%10.0f.%06.0f ms |%I64d\n"
                 , var.threadID
-                , var.name
+                , var.profileName
                 , avg
                 , avgn
                 , min
@@ -214,7 +210,7 @@ bool CThreadProfiler::SaveLogIntoFile()
 
             swprintf(wstrArr, 400, L"%8.0i| %30s| %10.0f.%06.0f ms | %10.0f.%06.0f ms |%10.0f.%06.0f ms |%I64d\n"
                 , 0
-                , target.sample.name
+                , target.sample.profileName
                 , avg
                 , avgn
                 , min
@@ -241,7 +237,7 @@ void CThreadProfiler::IntegrtingInformation()
         for (PROFILE_SAMPLE& var : *(p->datalist))
         {
             //같은 이름을 한 함수가 있는지.
-            TOTALPROFILE_SAMPLE* pSample = FindFuncInTotalDataList(var.name);
+            TOTALPROFILE_SAMPLE* pSample = FindFuncInTotalDataList(var.profileName);
             if(pSample==nullptr)
             {
                 //새로 넣어주기
@@ -270,7 +266,7 @@ CThreadProfiler::TOTALPROFILE_SAMPLE* CThreadProfiler::FindFuncInTotalDataList(W
 {
     for (TOTALPROFILE_SAMPLE& var : *totaldataList)
     {
-        if (wcscmp(var.sample.name, funcName) == 0)
+        if (wcscmp(var.sample.profileName, funcName) == 0)
         {
             return &var;
         }

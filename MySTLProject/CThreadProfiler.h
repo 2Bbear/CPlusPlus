@@ -69,16 +69,19 @@ int main()
 */
 #pragma endregion
 
+#include <Windows.h>
+#include <list>
+
 #define CProfiler_MaxNameSize 64
 
 
 class CThreadProfiler
 {
-public:
+private:
     struct PROFILE_SAMPLE
     {
         long lFlag; // 프로파일의 사용 여부. (배열시에만)
-        WCHAR name[CProfiler_MaxNameSize] = {}; // 프로파일 샘플 이름.
+        WCHAR profileName[CProfiler_MaxNameSize] = {}; // 프로파일 샘플 이름.
         int threadID;
         LARGE_INTEGER lStartTime; // 프로파일 샘플 실행 시간.
 
@@ -129,4 +132,3 @@ private:
     TOTALPROFILE_SAMPLE* FindFuncInTotalDataList(WCHAR * funcName);
 
 };
-
