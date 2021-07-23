@@ -12,5 +12,6 @@ public:
    
 private:
     std::atomic<bool> _locked = false;
+    
 };
 
