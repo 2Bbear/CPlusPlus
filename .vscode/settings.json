@@ -56,7 +56,12 @@
         "tuple": "cpp",
         "fstream": "cpp",
         "sstream": "cpp",
-        "terminal.integrated.shellArgs.windows": ["/K", "chcp 65001"]
+        "thread": "cpp",
+        "mutex": "cpp", 
+        "terminal.integrated.shellArgs.windows": [
+            "/K",
+            "chcp 65001"
+        ]
     }
     
 }

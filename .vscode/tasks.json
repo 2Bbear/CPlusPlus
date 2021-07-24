@@ -8,112 +8,23 @@
     },
     "tasks": [
         {
-            "label": "save and compile for C++",
-            "command": "g++",
-            "args": [
-                "${workspaceFolder}/main.cpp",
-                "-o",
-                "실행프로그램",
-                "${workspaceFolder}/CPlusPlusGrammer/pointer/**",
-                "${workspaceFolder}/CPlusPlusDesignPattern/CommandPattern/*",
-                "${workspaceFolder}/CPlusPlusDesignPattern/CPlusPlusDesignPatternModuler.cpp",
-                "${workspaceFolder}/CPlusPlusSTL/**"
-            ],
-            "group": "build",
-            "problemMatcher": {
-                "fileLocation": [
-                    "relative",
-                    "${workspaceRoot}"
-                ],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
-            }
-        },
-        {
-            "label": "save and compile for C",
-            "command": "gcc",
-            "args": [
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "group": "build",
-            "problemMatcher": {
-                "fileLocation": [
-                    "relative",
-                    "${workspaceRoot}"
-                ],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
-            }
-        },
-        {
-            "label": "execute",
-            "command": "cmd",
-            "group": "test",
-            "args": [
-                "/C",
-                "${workspaceFolder}\\실행프로그램"
-            ]
-        },
-        {
-            "type": "shell",
-            "label": "g++.exe build active file",
-            "command": "C:\\MinGW\\bin\\g++.exe",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "C:\\MinGW\\bin"
-            }
-        },
-        {
-            "type": "shell",
-            "label": "g++.exe build active file",
-            "command": "C:\\MinGW\\bin\\g++.exe",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "C:\\MinGW\\bin"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build"
-        },
-        {
             "type": "cppbuild",
-            "label": "C/C++: cl.exe 활성 파일 빌드",
-            "command": "cl.exe",
+            "label": "C/C++: 2bbear의 한국어 cl.exe 활성 파일 빌드",
+            "command": "%BUILD%",
             "args": [
                 "/Zi",
                 "/EHsc",
                 "/nologo",
                 "/Fe:",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${fileDirname}\\64Build\\${fileBasenameNoExtension}.exe",
                 "${file}"
+
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${fileDirname}\\64Build",
+                "env":{
+                    "BUILD":"VsDevCmd.bat && chcp 65001 && cl.exe"
+                }
             },
             "problemMatcher": [
                 "$msCompile"

@@ -8,13 +8,14 @@
             "name": "cl.exe - 활성 파일 빌드 및 디버그",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\64Build\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
+            "externalConsole": true,
             "environment": [],
             "console": "externalTerminal",
-            "preLaunchTask": "C/C++: cl.exe 활성 파일 빌드"
+            "preLaunchTask": "C/C++: 2bbear의 한국어 cl.exe 활성 파일 빌드"
         }
     ]
 }
