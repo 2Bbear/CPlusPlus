@@ -7,8 +7,8 @@ using namespace std;
 
 void MySpinLock::lock()
 {
-    bool expected = false;//기대하는 값
-    bool desired = true;//expected와 같다면 대입할 값.
+    bool expected = false;
+    bool desired = true;
     //CAS Compare And Swap
     while (_locked.compare_exchange_strong(expected, desired) == false)
     {

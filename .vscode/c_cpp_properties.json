@@ -5,7 +5,8 @@
             "intelliSenseMode": "${default}",
             "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\bin\\Hostx64\\x64\\cl.exe",
             "includePath": [
-                "${workspaceRoot}/**"
+                "${workspaceRoot}/**",
+                "${workspaceRoot}/MySTLProject/**"
             ],
             "defines": [
                 "_DEBUG"

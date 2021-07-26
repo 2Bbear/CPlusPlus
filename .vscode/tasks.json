@@ -17,13 +17,14 @@
                 "/nologo",
                 "/Fe:",
                 "${fileDirname}\\64Build\\${fileBasenameNoExtension}.exe",
-                "${file}"
+                "${file}",
+                "${fileDirname}\\MySTLProject\\Thread\\**.cpp"
 
             ],
             "options": {
                 "cwd": "${fileDirname}\\64Build",
                 "env":{
-                    "BUILD":"VsDevCmd.bat && chcp 65001 && cl.exe"
+                    "BUILD":"chcp 65001 && VsDevCmd.bat &&  cl.exe"
                 }
             },
             "problemMatcher": [
