@@ -6,7 +6,7 @@ Use Editor : VisualStudioCode
 Description :
 c++문법과, 모듈등을 실험하는 프로젝트입니다.
 
--List-
+-List--
 1. c++ Grammer  
     문법에 대한 프로젝트
 2. c++ Data Structure  
