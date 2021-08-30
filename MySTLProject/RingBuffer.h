@@ -10,7 +10,7 @@ public:
 	int writePos;
 	int bufferSize; //유저가 원한 크기
 	int arraySize; // 실제 만들어진 배열의 크기
-	char * values;
+	char * values; //데이터가 들어갈 곳
 	int curUseCount = 0; //현재 사용하고 있는 용량
 public:
 	RingBuffer() 
@@ -82,7 +82,6 @@ public:
 			{
 				oneSize = bufferSize - localWritePos;
 			}
-			
 		}
 		//==============================================
 		int cpySize = 0;

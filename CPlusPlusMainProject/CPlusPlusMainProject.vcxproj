@@ -19,7 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\MySTLProject\Thread\MyLockQueue.cpp" />
+    <ClCompile Include="..\MySTLProject\Thread\MyLockStack.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\MySTLProject\Thread\MyLockQueue.h" />
+    <ClInclude Include="..\MySTLProject\Thread\MyLockStack.h" />
+    <ClInclude Include="CoreMacro.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

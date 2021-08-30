@@ -1,8 +1,8 @@
-#include <iostream>
-using namespace std;
+
+#include<iostream>
+#include"CoreMacro.h"
+
 int main()
 {
-	cout << "Hello World" << endl;
-
-	return 0;
+	CRASH("Test");
 }
