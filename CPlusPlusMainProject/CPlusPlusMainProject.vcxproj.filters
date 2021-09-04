@@ -21,22 +21,16 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\MySTLProject\Thread\MyLockQueue.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\MySTLProject\Thread\MyLockStack.cpp">
+    <ClCompile Include="..\MySTLProject\CommonCodes\CoreTLS.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\MySTLProject\Thread\MyLockQueue.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="..\MySTLProject\CommonCodes\TypeReDefines.h">
+      <Filter>소스 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\MySTLProject\Thread\MyLockStack.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="CoreMacro.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="..\MySTLProject\CommonCodes\CoreTLS.h">
+      <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
